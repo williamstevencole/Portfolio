@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 // Import your page components
 import Home from './components/Home/Home.jsx';
@@ -22,6 +22,7 @@ const App = () => {
     const [currentPageIndex, setCurrentPageIndex] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const containerRef = useRef(null);
+    const [rerenderKey, setRerenderKey] = useState(0); // Key for forcing re-render
 
     const handleScroll = () => {
         if (!containerRef.current) return;
@@ -31,6 +32,7 @@ const App = () => {
 
         if (newPageIndex !== currentPageIndex) {
             setCurrentPageIndex(newPageIndex);
+            setRerenderKey(Date.now()); // Update key for active component
         }
     };
 
@@ -41,6 +43,7 @@ const App = () => {
             behavior: 'smooth',
         });
         setCurrentPageIndex(index);
+        setRerenderKey(Date.now()); // Update key for active component
     };
 
     useEffect(() => {
@@ -55,8 +58,7 @@ const App = () => {
     return (
         <div
             ref={containerRef}
-            className="w-screen h-screen overflow-auto snap-y snap-mandatory scroll-smooth"
-            style={{ backgroundColor: '#0f0f0f' }}
+            className="w-screen h-screen overflow-auto snap-y snap-mandatory scroll-smooth bg-[#0f0f0f]"
         >
             {/* Header */}
             <header
@@ -115,16 +117,14 @@ const App = () => {
             <div>
                 {pages.map((page, index) => (
                     <div
-                        key={currentPageIndex === index ? `${page.id}-${Date.now()}` : page.id}
-                        className={`snap-start w-full h-screen flex items-center justify-center ${
-                            currentPageIndex === index ? 'animate-fadeIn' : 'animate-fadeOut'
+                        key={page.id}
+                        id={`page-${page.id}`}
+                        className={`snap-start w-full h-screen flex items-center justify-center transition-opacity duration-500 ${
+                            currentPageIndex === index ? 'opacity-100 visible' : 'opacity-0 invisible'
                         }`}
-                        style={{
-                            transition: 'opacity 0.5s ease-in-out',
-                            opacity: currentPageIndex === index ? 1 : 0,
-                        }}
                     >
-                        {page.component}
+                        {/* Re-render active component using dynamic key */}
+                        {currentPageIndex === index && React.cloneElement(page.component, { key: rerenderKey })}
                     </div>
                 ))}
             </div>

@@ -3,60 +3,72 @@ import React from 'react';
 const skills = [
     {
         id: 1,
-        name: 'HTML5',
+        name: 'HTML',
         logo: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
         description: 'Markup language for structuring web content.',
     },
     {
         id: 2,
+        name: 'CSS',
+        logo: 'https://img.icons8.com/?size=100&id=21278&format=png&color=000000',
+        description: 'Styling language for designing web content.',
+    },
+    {
+        id: 3,
+        name: 'JavaScript',
+        logo: 'https://img.icons8.com/?size=100&id=108784&format=png&color=000000',
+        description: 'High-level programming language for web development.',
+    },
+    {
+        id: 4,
         name: 'React',
         logo: 'https://img.icons8.com/?size=100&id=123603&format=png&color=000000',
         description: 'JavaScript library for building UIs.',
     },
     {
-        id: 3,
+        id: 5,
         name: 'Express.js',
         logo: 'https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000',
         description: 'Minimalist web framework for Node.js.',
     },
     {
-        id: 4,
+        id: 6,
         name: 'PostgreSQL',
         logo: 'https://img.icons8.com/?size=100&id=38561&format=png&color=000000',
         description: 'Open-source relational database.',
     },
     {
-        id: 5,
+        id: 7,
         name: 'MongoDB',
         logo: 'https://img.icons8.com/?size=100&id=74402&format=png&color=000000',
         description: 'NoSQL database for flexible data models.',
     },
     {
-        id: 6,
+        id: 8,
         name: 'Python',
         logo: 'https://img.icons8.com/?size=100&id=13441&format=png&color=000000',
         description: 'Versatile programming language.',
     },
     {
-        id: 7,
+        id: 9,
         name: 'C++',
         logo: 'https://img.icons8.com/?size=100&id=40669&format=png&color=000000',
         description: 'High-performance programming language.',
     },
     {
-        id: 8,
+        id: 10,
         name: 'Java',
         logo: 'https://img.icons8.com/?size=100&id=13679&format=png&color=000000',
         description: 'Popular language for enterprise applications.',
     },
     {
-        id: 9,
+        id: 11,
         name: 'Docker',
         logo: 'https://img.icons8.com/?size=100&id=22813&format=png&color=000000',
         description: 'Platform for containerized applications.',
     },
     {
-        id: 10,
+        id: 12,
         name: 'Git',
         logo: 'https://img.icons8.com/?size=100&id=20906&format=png&color=000000',
         description: 'Version control system for code.',
@@ -72,7 +84,7 @@ const Skills = () => {
             </h1>
 
             {/* Skills Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  sm:gap-6 lg:gap-8 ">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 ">
                 {skills.map((skill) => (
                     <div
                         key={skill.id}
