@@ -3,33 +3,33 @@ import React from 'react';
 const skills = [
     {
         id: 1,
+        name: 'Express.js',
+        logo: 'https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000',
+        description: 'Minimalist web framework for Node.js.',
+    },
+    {
+        id: 2,
         name: 'HTML',
         logo: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
         description: 'Markup language for structuring web content.',
     },
     {
-        id: 2,
+        id: 3,
         name: 'CSS',
         logo: 'https://img.icons8.com/?size=100&id=21278&format=png&color=000000',
         description: 'Styling language for designing web content.',
     },
     {
-        id: 3,
+        id: 4,
         name: 'JavaScript',
         logo: 'https://img.icons8.com/?size=100&id=108784&format=png&color=000000',
         description: 'High-level programming language for web development.',
     },
     {
-        id: 4,
+        id: 5,
         name: 'React',
         logo: 'https://img.icons8.com/?size=100&id=123603&format=png&color=000000',
         description: 'JavaScript library for building UIs.',
-    },
-    {
-        id: 5,
-        name: 'Express.js',
-        logo: 'https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000',
-        description: 'Minimalist web framework for Node.js.',
     },
     {
         id: 6,
@@ -77,18 +77,18 @@ const skills = [
 
 const Skills = () => {
     return (
-        <div className="flex flex-col items-center justify-center w-full h-fit bg-[#0f0f0f] text-gray-300 pt-[3rem] px-4">
+        <div className="flex flex-col items-center justify-center w-full h-fit bg-[#0f0f0f] text-gray-300 lg:pt-[1rem] px-4">
             {/* Section Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-10 animate-slideInFromTop">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-4 lg:pb-10 animate-slideInFromTop">
                 SKILLS
             </h1>
 
             {/* Skills Grid */}
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 ">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 pb-6 lg:pb-0 sm:gap-6 lg:gap-8 ">
                 {skills.map((skill) => (
                     <div
                         key={skill.id}
-                        className="flex flex-col items-center justify-center bg-[#1c1a1a] p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl animate-slideInFromBottom"
+                        className="flex flex-col items-center justify-center bg-[#1c1a1a] p-6 lg:p-2 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl animate-slideInFromBottom"
                         style={{
                             boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
                         }}
@@ -101,7 +101,7 @@ const Skills = () => {
                         <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-200">
                             {skill.name}
                         </h3>
-                        <p className="text-xs sm:text-sm lg:text-base text-gray-400 text-center mt-2">
+                        <p className="hidden lg:block  sm:text-sm lg:text-base text-gray-400 text-center mt-2">
                             {skill.description}
                         </p>
                     </div>

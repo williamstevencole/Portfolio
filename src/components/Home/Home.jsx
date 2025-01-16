@@ -42,48 +42,19 @@ const Home = () => {
     }, [titles, currentTitleIndex, isDeleting, charIndex]);
 
     return (
-        <div className="pt-[7.5rem] lg:pt-[8.5rem] grid grid-cols-1 lg:grid-cols-2 min-h-screen">
-            {/* Left Section */}
-            <div className="font ps-16 pe-8 lg:py-[8rem] lg:space-y-2 relative animate-slideInFromLeft text-center lg:text-left">
-                <h1 className="font-extrabold text-4xl lg:text-6xl text-blue-500">
-                    Hi, I&apos;m William
-                </h1>
-                <div className="pt-4 flex flex-col lg:flex-row items-center lg:items-baseline">
-                    <h3 className="font-bold text-xl lg:text-3xl text-gray-300">
-                        I&apos;m a&nbsp;
-                    </h3>
-                    <span
-                        className="font-bold text-xl lg:text-3xl text-blue-500 border-r-2 border-orange-500 whitespace-nowrap"
-                    >
-                        {currentTitle}
-                    </span>
-                </div>
-                <p className="text-base lg:text-lg pt-4 lg:pr-16 text-gray-400 leading-relaxed">
-                    I'm pursuing a dual degree in Computer Systems Engineering and Data Science & AI Engineering, currently halfway through my studies.
-                    Driven by a passion for continuous learning, I’m deepening my skills in web development, and software development.
-                </p>
-                {/* Contact Button */}
-                <div className="py-4 mt-4">
-                    <button
-                        className="bg-blue-500 text-white py-2 px-6 lg:py-4 lg:px-8 rounded-xl hover:bg-blue-600 transition duration-300"
-                    >
-                        Download my CV
-                    </button>
-                </div>
-            </div>
-
-            {/* Right Section - Responsive Image */}
-            <div className="animate-slideInFromRight flex justify-center pt-16 ps-10">
-                        <div
-                            className="w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden flex items-center justify-center"
-                            style={{
-                            backgroundColor: "#0f0f0f",
-                            animation: "rgbSpin 3s linear infinite",
-                            }}
-                        >
-                            <style>
-                            {`
-                                @keyframes rgbSpin {
+        <div className="pt-[4.5rem] lg:pt-[5.5rem] grid grid-cols-1 lg:grid-cols-2 min-h-screen gap-1 pb-8 lg:px-16">
+            {/* Image Section */}
+            <div className="order-1 lg:order-2 flex justify-center items-center animate-slideInFromRight">
+                <div
+                    className="w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden flex items-center justify-center"
+                    style={{
+                        backgroundColor: "#0f0f0f",
+                        animation: "rgbSpin 3s linear infinite",
+                    }}
+                >
+                    <style>
+                        {`
+                            @keyframes rgbSpin {
                                 0% {
                                     box-shadow: 0 0 20px 10px rgba(0, 0, 255, 1),
                                                 0 0 60px 30px rgba(0, 0, 255, 0.8),
@@ -109,16 +80,50 @@ const Home = () => {
                                                 0 0 60px 30px rgba(0, 0, 255, 0.8),
                                                 20px 0 40px rgba(0, 0, 255, 0.5);
                                 }
-                                }
-                            `}
-                            </style>
-                            <img
-                            src={me}
-                            alt="William Cole"
-                            className="w-[12rem] h-[16rem] sm:w-[18rem] sm:h-[24rem] md:w-[24rem] md:h-[32rem] object-scale-down rounded-full"
-                            />
-                        </div>
+                            }
+                        `}
+                    </style>
+                    <img
+                        src={me}
+                        alt="William Cole"
+                        className="w-[12rem] h-[16rem] sm:w-[18rem] sm:h-[24rem] md:w-[24rem] md:h-[32rem] object-scale-down rounded-full"
+                    />
                 </div>
+            </div>
+
+            {/* Text Section */}
+            <div className="order-2 lg:order-1 font px-4 lg:py-[8rem] lg:space-y-2 relative animate-slideInFromLeft text-center lg:text-left">
+                <h1 className="font-extrabold text-4xl lg:text-6xl text-blue-500">
+                    Hi, I&apos;m William
+                </h1>
+                <div className="pt-4 flex flex-col lg:flex-row items-center lg:items-baseline">
+                    <h3 className="font-bold text-xl lg:text-3xl text-gray-300">
+                        I&apos;m a&nbsp;
+                    </h3>
+                    <span
+                        className="font-bold text-xl lg:text-3xl text-blue-500 border-r-2 border-orange-500 whitespace-nowrap"
+                    >
+                        {currentTitle}
+                    </span>
+                </div>
+                <p className="text-base lg:text-lg pt-2 lg:pr-16 text-gray-400 leading-relaxed">
+                    I'm pursuing a dual degree in Computer Systems Engineering and Data Science & AI Engineering, currently halfway through my studies.
+                    Driven by a passion for continuous learning, I’m deepening my skills in web development, and software development.
+                </p>
+                {/* Contact Button */}
+                <div className="px-20 lg:px-0 lg:py-4 mt-4">
+                    <button
+                            className="bg-blue-500 text-white py-2 px-8 lg:py-4 lg:px-8 rounded-xl hover:bg-blue-600 transition duration-300 flex items-center justify-center gap-2">
+                            <img
+                                src="https://img.icons8.com/ios-filled/50/FFFFFF/download.png"
+                                alt="Download Icon"
+                                className="w-5 h-5 lg:pb-1 lg:w-6 lg:h-6"
+                            />
+                            Download my CV
+                        </button>
+
+                </div>
+            </div>
         </div>
     );
 };

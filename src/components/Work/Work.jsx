@@ -47,9 +47,9 @@ const Work = () => {
     };
 
     return (
-        <div className="flex align-center justify-center h-fit w-screen pb-20 pt-10">
+        <div className="flex align-center justify-center h-fit w-screen pb-[5rem] lg:pb-20 lg:pt-10">
             <div className="flex flex-col items-center justify-center py-20">
-                <h1 className="text-3xl sm:text-5xl text-blue-500 font-extrabold pb-20 pt-12 sm:pt-[50px] tracking-widest animate-slideInFromRight">
+                <h1 className="text-3xl sm:text-5xl text-blue-500 font-extrabold pt-4 pb-10 lg:pb-16 lg:pt-12 sm:pt-[50px] tracking-widest animate-slideInFromTop">
                     RECENT PROJECTS
                 </h1>
 
@@ -65,7 +65,7 @@ const Work = () => {
                         {visibleProjects.map((index, position) => (
                             <div
                                 key={index}
-                                className={`relative h-[30rem] w-[12rem]  sm:h-[26rem] sm:w-[18rem] rounded-2xl overflow-hidden transition-transform duration-[1500ms] ease-in-out transform ${
+                                className={`relative h-[30rem] w-[15rem] rounded-2xl overflow-hidden transition-transform duration-[1500ms] ease-in-out transform ${
                                     position === 1
                                         ? 'scale-105 z-10'
                                         : position === 0
@@ -86,10 +86,10 @@ const Work = () => {
                                 <img
                                     src={images[index]}
                                     alt={workTitle[index]}
-                                    className="w-full h-[20rem] object-cover"
+                                    className="w-full h-[16rem] object-cover"
                                 />
 
-                                <div className="absolute top-[16.2rem] left-0 right-0 px-4 text-white text-center">
+                                <div className="absolute top-[13.2rem] left-0 right-0 px-4 text-white text-center">
                                     <h1 className="text-2xl font-bold">{workTitle[index]}</h1>
                                     <p className="text-sm pt-2 ">{descriptions[index]}</p>
                                 </div>

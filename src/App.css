@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling on the body */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+}
+
 
 .slideInFromBottom {
     transform: translateY(100%);

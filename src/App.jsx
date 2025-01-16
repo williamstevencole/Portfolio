@@ -37,13 +37,13 @@ const App = () => {
     };
 
     const handleNavigate = (index) => {
-        setMenuOpen(false); // Close the menu
-        containerRef.current.scrollTo({
-            top: index * containerRef.current.offsetHeight,
-            behavior: 'smooth',
-        });
-        setCurrentPageIndex(index);
-        setRerenderKey(Date.now()); // Update key for active component
+            setMenuOpen(false);
+            containerRef.current.scrollTo({
+                top: index * containerRef.current.offsetHeight,
+                behavior: 'smooth',
+            });
+            setCurrentPageIndex(index);
+            setRerenderKey(Date.now());
     };
 
     useEffect(() => {
@@ -62,7 +62,7 @@ const App = () => {
         >
             {/* Header */}
             <header
-                className="sticky top-0 left-0 w-full bg-black text-white py-4 z-10"
+                className="sticky top-0 left-0 w-full bg-black text-white py-1 lg:py-4 z-10"
                 style={{
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.5)',
                     backgroundColor: '#0f0f0f',

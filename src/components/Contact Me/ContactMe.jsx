@@ -3,7 +3,7 @@ import me from "../../assets/Me/me.png";
 
 const ContactMe = () => {
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-center pt-[8rem] px-6 sm:px-10 text-white">
+    <div className="min-h-screen w-screen flex flex-col items-center justify-center pt-[3rem] lg:pt-[8rem] px-6 sm:px-10 text-white">
         {/* Section Title */}
         <div className="w-full flex justify-center items-center">
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-widest text-blue-500 animate-slideInFromTop text-center">
@@ -16,7 +16,7 @@ const ContactMe = () => {
             {/* Image Section */}
             <div className="animate-slideInFromLeft flex justify-center">
             <div
-                className="w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] md:w-[30rem] md:h-[30rem] rounded-full overflow-hidden flex items-center justify-center"
+                className="w-[12rem] h-[12rem] sm:w-[20rem] sm:h-[20rem] md:w-[30rem] md:h-[30rem] rounded-full overflow-hidden flex items-center justify-center"
                 style={{
                 backgroundColor: "#0f0f0f",
                 animation: "rgbSpin 3s linear infinite",
@@ -56,7 +56,7 @@ const ContactMe = () => {
                 <img
                 src={me}
                 alt="William Cole"
-                className="w-[12rem] h-[16rem] sm:w-[18rem] sm:h-[24rem] md:w-[24rem] md:h-[32rem] object-scale-down rounded-full"
+                className="w-[10rem] h-[14rem] sm:w-[18rem] sm:h-[24rem] md:w-[24rem] md:h-[32rem] object-scale-down rounded-full"
                 />
             </div>
             </div>
