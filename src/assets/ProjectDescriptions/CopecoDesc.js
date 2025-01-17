@@ -1,3 +1,3 @@
-const textCopeco = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+const textCopeco = "This is a web app developed by UNITEC students for COPECO, that helps this organization register ambulance services all over the country. In this project, i was mainly a backend developer, but also took an important role in developing the frontend. The backend was developed with Express.js and PostgreSQL, and the frontend was developed with React.";
 
 export default textCopeco;

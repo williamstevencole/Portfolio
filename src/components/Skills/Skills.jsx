@@ -2,93 +2,85 @@ import React from 'react';
 
 const skills = [
     {
-        id: 1,
         name: 'Express.js',
         logo: 'https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000',
-        description: 'Minimalist web framework for Node.js.',
     },
     {
-        id: 2,
-        name: 'HTML',
-        logo: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
-        description: 'Markup language for structuring web content.',
+        name: 'TypeScript',
+        logo: 'https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000',
     },
     {
-        id: 3,
-        name: 'CSS',
-        logo: 'https://img.icons8.com/?size=100&id=21278&format=png&color=000000',
-        description: 'Styling language for designing web content.',
-    },
-    {
-        id: 4,
-        name: 'JavaScript',
-        logo: 'https://img.icons8.com/?size=100&id=108784&format=png&color=000000',
-        description: 'High-level programming language for web development.',
-    },
-    {
-        id: 5,
-        name: 'React',
-        logo: 'https://img.icons8.com/?size=100&id=123603&format=png&color=000000',
-        description: 'JavaScript library for building UIs.',
-    },
-    {
-        id: 6,
-        name: 'PostgreSQL',
-        logo: 'https://img.icons8.com/?size=100&id=38561&format=png&color=000000',
-        description: 'Open-source relational database.',
-    },
-    {
-        id: 7,
-        name: 'MongoDB',
-        logo: 'https://img.icons8.com/?size=100&id=74402&format=png&color=000000',
-        description: 'NoSQL database for flexible data models.',
-    },
-    {
-        id: 8,
-        name: 'Python',
-        logo: 'https://img.icons8.com/?size=100&id=13441&format=png&color=000000',
-        description: 'Versatile programming language.',
-    },
-    {
-        id: 9,
-        name: 'C++',
-        logo: 'https://img.icons8.com/?size=100&id=40669&format=png&color=000000',
-        description: 'High-performance programming language.',
-    },
-    {
-        id: 10,
-        name: 'Java',
-        logo: 'https://img.icons8.com/?size=100&id=13679&format=png&color=000000',
-        description: 'Popular language for enterprise applications.',
-    },
-    {
-        id: 11,
         name: 'Docker',
         logo: 'https://img.icons8.com/?size=100&id=22813&format=png&color=000000',
-        description: 'Platform for containerized applications.',
     },
     {
-        id: 12,
         name: 'Git',
         logo: 'https://img.icons8.com/?size=100&id=20906&format=png&color=000000',
-        description: 'Version control system for code.',
     },
+    {
+        name: 'PostgreSQL',
+        logo: 'https://img.icons8.com/?size=100&id=38561&format=png&color=000000',
+    },
+    {
+        name: 'SQL Server',
+        logo: 'https://img.icons8.com/?size=100&id=laYYF3dV0Iew&format=png&color=000000'
+    },
+    {
+        name: 'HTML',
+        logo: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
+    },
+    {
+        name: 'CSS',
+        logo: 'https://img.icons8.com/?size=100&id=21278&format=png&color=000000',
+    },
+    {
+        name: 'Tailwind',
+        logo: 'https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000',
+    },
+    {
+        name: 'JavaScript',
+        logo: 'https://img.icons8.com/?size=100&id=108784&format=png&color=000000',
+    },
+    {
+        name: 'React',
+        logo: 'https://img.icons8.com/?size=100&id=123603&format=png&color=000000',
+    },
+    {
+        name: 'MongoDB',
+        logo: 'https://img.icons8.com/?size=100&id=74402&format=png&color=000000',
+    },
+    {
+        name: 'Python',
+        logo: 'https://img.icons8.com/?size=100&id=13441&format=png&color=000000',
+    },
+    {
+        name: 'C++',
+        logo: 'https://img.icons8.com/?size=100&id=40669&format=png&color=000000',
+    },
+    {
+        name: 'Java',
+        logo: 'https://img.icons8.com/?size=100&id=13679&format=png&color=000000',
+    }
 ];
 
 const Skills = () => {
     return (
-        <div className="flex flex-col items-center justify-center w-full h-fit bg-[#0f0f0f] text-gray-300 lg:pt-[1rem] px-4">
+        <div className="flex flex-col items-center justify-center w-full h-fit bg-[#0f0f0f] text-gray-300 lg:pt-[8rem] px-4">
             {/* Section Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-4 lg:pb-10 animate-slideInFromTop">
+            <h1 className="text-3xl xs:text-3xl sm:text-4xl lg:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-2 lg:pb-3 lg:pt-6 animate-slideInFromTop">
                 SKILLS
             </h1>
 
+            <p className="text-base sm:text-lg lg:text-xl text-center px-4 lg:px-20 pb-2 lg:pb-4">
+                Here are some of the technologies I've worked with:
+            </p>
+
             {/* Skills Grid */}
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 pb-6 lg:pb-0 sm:gap-6 lg:gap-8 ">
+            <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 pb-24">
                 {skills.map((skill) => (
                     <div
-                        key={skill.id}
-                        className="flex flex-col items-center justify-center bg-[#1c1a1a] p-6 lg:p-2 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl animate-slideInFromBottom"
+                        key={skill.name}
+                        className="flex flex-col items-center justify-center bg-[#1c1a1a] p-1 xs:p-2 sm:p-4 lg:p-4 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl animate-slideInFromBottom"
                         style={{
                             boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
                         }}
@@ -96,14 +88,11 @@ const Skills = () => {
                         <img
                             src={skill.logo}
                             alt={skill.name}
-                            className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 mb-4"
+                            className="h-12 w-12 sm:h-16 sm:w-16 lg:h-24 lg:w-24 mb-4"
                         />
-                        <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-200">
+                        <h3 className="justify-center text-base sm:text-lg lg:text-xl font-semibold text-gray-200">
                             {skill.name}
                         </h3>
-                        <p className="hidden lg:block  sm:text-sm lg:text-base text-gray-400 text-center mt-2">
-                            {skill.description}
-                        </p>
                     </div>
                 ))}
             </div>

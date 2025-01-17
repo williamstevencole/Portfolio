@@ -6,7 +6,7 @@ import Copeco from '../../assets/ProjectImages/Copeco.png';
 import SPSScript from '../../assets/ProjectImages/SPSScript.png';
 import Webhub from '../../assets/ProjectImages/Webhub.png';
 
-import text2048 from '../../assets/ProjectDescriptions/SPSScriptDesc';
+import text2048 from '../../assets/ProjectDescriptions/2048Desc';
 import textInfectext from '../../assets/ProjectDescriptions/InfectextDesc';
 import textCopeco from '../../assets/ProjectDescriptions/CopecoDesc';
 import textSPS from '../../assets/ProjectDescriptions/SPSScriptDesc';
@@ -28,7 +28,7 @@ const Work = () => {
     useEffect(() => {
         const interval = setInterval(() => {
         handleNext();
-        }, 2000);
+        }, 3000);
         return () => clearInterval(interval);
     }, [visibleProjects]);
 
@@ -50,7 +50,7 @@ const Work = () => {
         <div className="flex align-center justify-center h-fit w-screen pb-[5rem] lg:pb-20 lg:pt-10">
             <div className="flex flex-col items-center justify-center py-20">
                 <h1 className="text-3xl sm:text-5xl text-blue-500 font-extrabold pt-4 pb-10 lg:pb-16 lg:pt-12 sm:pt-[50px] tracking-widest animate-slideInFromTop">
-                    RECENT PROJECTS
+                    PROJECTS
                 </h1>
 
                 <div className="relative flex items-center justify-center">
@@ -86,12 +86,12 @@ const Work = () => {
                                 <img
                                     src={images[index]}
                                     alt={workTitle[index]}
-                                    className="w-full h-[16rem] object-cover"
+                                    className="w-full h-[13rem] object-cover"
                                 />
 
-                                <div className="absolute top-[13.2rem] left-0 right-0 px-4 text-white text-center">
+                                <div className="absolute top-[11.2rem] left-0 right-0 px-4 text-white text-center">
                                     <h1 className="text-2xl font-bold">{workTitle[index]}</h1>
-                                    <p className="text-sm pt-2 ">{descriptions[index]}</p>
+                                    <p className="text-[0.75rem] lg:text-[0.75rem] pt-2 ">{descriptions[index]}</p>
                                 </div>
                             </div>
                         ))}

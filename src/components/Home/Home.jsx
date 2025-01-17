@@ -111,18 +111,26 @@ const Home = () => {
                     Driven by a passion for continuous learning, I’m deepening my skills in web development, and software development.
                 </p>
                 {/* Contact Button */}
-                <div className="px-20 lg:px-0 lg:py-4 mt-4">
-                    <button
-                            className="bg-blue-500 text-white py-2 px-8 lg:py-4 lg:px-8 rounded-xl hover:bg-blue-600 transition duration-300 flex items-center justify-center gap-2">
+                <div className="flex items-center justify-center lg:items-start lg:justify-start pt-2 lg:pt-4 w-full">
+                    <a
+                        href="/WilliamCole_CV.pdf"
+                        download="WilliamCole_CV.pdf"
+                        className="bg-blue-500 text-white py-2 px-4 lg:py-4 lg:px-6 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center gap-2" // Added 'flex' and 'items-center' here
+                    >
+                        <div className = "pb-1">
                             <img
                                 src="https://img.icons8.com/ios-filled/50/FFFFFF/download.png"
                                 alt="Download Icon"
-                                className="w-5 h-5 lg:pb-1 lg:w-6 lg:h-6"
+                                className="w-4 h-4 lg:w-5 lg:h-5"
                             />
-                            Download my CV
-                        </button>
-
+                        </div>
+                        <span className="text-sm lg:text-base">Download my CV</span>
+                    </a>
                 </div>
+
+
+
+
             </div>
         </div>
     );

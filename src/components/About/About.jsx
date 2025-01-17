@@ -5,14 +5,14 @@ import me2 from '../../assets/Me/me2.jpg';
 const About = () => {
 
     return (
-        <div className="flex flex-col items-center justify-center w-screen h-fit pb-6 lg:pb-8 lg:pt-[6rem]  bg-[#0f0f0f] text-gray-300">
+        <div className="flex flex-col items-center justify-center w-screen h-fit pb-6 lg:pb-8 lg:pt-[4rem] text-gray-300">
             {/* Section Title */}
             <h1 className="text-3xl sm:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-10 animate-slideInFromTop">
                 ABOUT ME
             </h1>
 
             {/* Main Content */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-4 lg:gap-8 px-4 lg:px-20 lg:pt-8 max-w-screen-xl">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-4 lg:gap-8 px-4 lg:px-20 lg:pt-2 max-w-screen-xl">
                 {/* Column 1 - Image */}
                 <div className="flex justify-center items-center animate-slideInFromLeft">
                     <img
@@ -27,17 +27,17 @@ const About = () => {
 
                 {/* Column 2 - Text */}
                 <div className="pt-2 lg:pt-10 flex flex-col justify-center space-y-4 lg:space-y-6 text-center sm:text-left sm:pr-8 animate-slideInFromRight">
-                    <p className="text-sm sm:text-lg leading-relaxed">
-                        Hello, I’m <span className="text-blue-500 font-bold">William Cole</span>, a highly motivated
-                        <span className="font-bold"> Computer Science and Data Science student</span>. I’m currently pursuing
-                        a dual degree in Computer Systems Engineering and Data Science & AI Engineering, with a strong passion
+                    <p className="text-xs h:sm:text-sm sm:text-lg leading-relaxed">
+                        Hello, I’m <span className="text-blue-500 font-bold">William Cole</span>. I’m currently pursuing
+                        a dual degree in <span className="text-blue-500 font-bold">Computer Systems Engineering</span> and
+                        <span className="text-blue-500 font-bold"> Data Science & AI Engineering</span>, with a strong passion
                         for learning and creating innovative software solutions. My goal is to contribute to impactful projects
                         that merge cutting-edge technologies with meaningful user experiences.
                     </p>
 
-                        {/* Text will not show on phones, but on larger screens it will :D */}
+                    {/* Text will not show on phones, but on larger screens it will :D */}
                     <p className="hidden lg:block lg:text-lg leading-relaxed">
-                        With a foundation in <span className="font-bold">frontend</span> and <span className="font-bold">backend development</span>,
+                        With a foundation in <span className="text-blue-500 font-bold">frontend</span> and <span className="text-blue-500 font-bold">backend development</span>,
                         I specialize in crafting seamless web applications, designing scalable APIs, and integrating AI-powered tools to enhance usability.
                         I enjoy tackling complex challenges, and I’m always exploring new tools and methodologies to improve my craft.
                     </p>

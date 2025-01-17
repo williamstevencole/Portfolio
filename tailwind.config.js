@@ -4,6 +4,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+        screens:{
+            'h-xs': { raw: '(max-height: 640px)' }, // Small-height devices
+            'h-sm': { raw: '(min-height: 641px)' }, // Medium-small height
+            'h-md': { raw: '(min-height: 801px)' }, // Medium height
+            'h-lg': { raw: '(min-height: 1025px)' }, // Large height
+            'h-xl': { raw: '(min-height: 1281px)' }, // Extra-large height
+        },
       keyframes: {
         typing: {
           from: { width: '0' },

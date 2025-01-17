@@ -79,15 +79,25 @@ const ContactMe = () => {
             {/* Let's Connect */}
             <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-blue-500 pb-4">
-                LET&#39;S CONNECT
+                    LET&#39;S CONNECT
                 </h3>
-                <div className="space-x-2 sm:space-x-4">
-                <button className="bg-blue-500 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-blue-600 transition duration-300">
-                    LinkedIn
-                </button>
-                <button className="bg-blue-500 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-blue-600 transition duration-300">
-                    GitHub
-                </button>
+                <div className="space-x-2 sm:space-x-4 flex items-center">
+                    <button className="bg-blue-500 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
+                        <img
+                            src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000"
+                            alt="LinkedIn"
+                            className="w-6 h-6"
+                        />
+                        <span>LinkedIn</span>
+                    </button>
+                    <button className="bg-blue-500 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
+                        <img
+                            src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
+                            alt="GitHub"
+                            className="w-6 h-6"
+                        />
+                        <span>GitHub</span>
+                    </button>
                 </div>
             </div>
 
