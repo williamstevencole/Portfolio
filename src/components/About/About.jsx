@@ -1,24 +1,53 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import me2 from '../../assets/Me/me2.jpg';
 
 const About = () => {
+    const imageRef = useRef(null);
+    const textRef = useRef(null);
+    const [isImageVisible, setIsImageVisible] = useState(false);
+    const [isTextVisible, setIsTextVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.target === imageRef.current) {
+                        setIsImageVisible(entry.isIntersecting);
+                    }
+                    if (entry.target === textRef.current) {
+                        setIsTextVisible(entry.isIntersecting);
+                    }
+                });
+            },
+            { threshold: 0.00001 } // Trigger when 10% of the element is visible
+        );
+
+        if (imageRef.current) observer.observe(imageRef.current);
+        if (textRef.current) observer.observe(textRef.current);
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center w-screen h-fit pb-6 lg:pb-8 lg:pt-[4rem] text-gray-300">
+        <div className="flex flex-col items-center justify-center w-screen h-screen lg:pb-8 lg:pt-[4rem] text-gray-300 bg-[#0f0f0f]">
             {/* Section Title */}
-            <h1 className="text-3xl sm:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-10 animate-slideInFromTop">
+            <h1 className="text-3xl sm:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-10">
                 ABOUT ME
             </h1>
 
             {/* Main Content */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-4 lg:gap-8 px-4 lg:px-20 lg:pt-2 max-w-screen-xl">
                 {/* Column 1 - Image */}
-                <div className="flex justify-center items-center animate-slideInFromLeft">
+                <div
+                    ref={imageRef}
+                    className={`flex justify-center items-center transition-all duration-700 ${
+                        isImageVisible ? 'animate-slideInFromLeft' : 'opacity-0 translate-x-[-100px]'
+                    }`}
+                >
                     <img
                         src={me2}
                         alt="me"
-                        className="h-[17rem] w-[11.5rem] lg:h-[31.5rem] lg:w-[95rem] rounded-2xl shadow-lg duration-300"
+                        className="object-cover h-[17rem] w-[11.5rem] lg:h-[31.5rem] lg:w-[95rem] rounded-2xl shadow-lg duration-300"
                         style={{
                             boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.5)',
                         }}
@@ -26,8 +55,13 @@ const About = () => {
                 </div>
 
                 {/* Column 2 - Text */}
-                <div className="pt-2 lg:pt-10 flex flex-col justify-center space-y-4 lg:space-y-6 text-center sm:text-left sm:pr-8 animate-slideInFromRight">
-                    <p className="text-xs h:sm:text-sm sm:text-lg leading-relaxed">
+                <div
+                    ref={textRef}
+                    className={`pt-2 lg:pt-10 flex flex-col justify-start space-y-4 lg:space-y-6 text-start transition-all duration-700 ${
+                        isTextVisible ? 'animate-slideInFromRight' : 'opacity-0 translate-x-[100px]'
+                    }`}
+                >
+                    <p className="text-xs sm:text-sm lg:text-lg leading-relaxed">
                         Hello, I’m <span className="text-blue-500 font-bold">William Cole</span>. I’m currently pursuing
                         a dual degree in <span className="text-blue-500 font-bold">Computer Systems Engineering</span> and
                         <span className="text-blue-500 font-bold"> Data Science & AI Engineering</span>, with a strong passion
@@ -35,7 +69,6 @@ const About = () => {
                         that merge cutting-edge technologies with meaningful user experiences.
                     </p>
 
-                    {/* Text will not show on phones, but on larger screens it will :D */}
                     <p className="hidden lg:block lg:text-lg leading-relaxed">
                         With a foundation in <span className="text-blue-500 font-bold">frontend</span> and <span className="text-blue-500 font-bold">backend development</span>,
                         I specialize in crafting seamless web applications, designing scalable APIs, and integrating AI-powered tools to enhance usability.

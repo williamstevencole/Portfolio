@@ -42,7 +42,7 @@ const Home = () => {
     }, [titles, currentTitleIndex, isDeleting, charIndex]);
 
     return (
-        <div className="pt-[4.5rem] lg:pt-[5.5rem] grid grid-cols-1 lg:grid-cols-2 min-h-screen gap-1 pb-8 lg:px-16">
+        <div className="pt-[4.5rem] lg:pt-[2.5rem] grid grid-cols-1 lg:grid-cols-2  lg:gap-4 lg:pb-8 lg:px-16">
             {/* Image Section */}
             <div className="order-1 lg:order-2 flex justify-center items-center animate-slideInFromRight">
                 <div
@@ -127,10 +127,6 @@ const Home = () => {
                         <span className="text-sm lg:text-base">Download my CV</span>
                     </a>
                 </div>
-
-
-
-
             </div>
         </div>
     );
