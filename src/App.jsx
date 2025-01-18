@@ -28,10 +28,10 @@ const App = () => {
     };
 
     return (
-        <div className="bg-[#0f0f0f] lg:w-full h-full">
+        <div className="lg:w-full h-full overflow-x-hidden ">
             {/* Header */}
             <header
-                className="sticky top-0 left-0 w-full bg-black text-white py-1 lg:py-4 z-10"
+                className="bg-[#000000] fixed top-0 left-0 w-full text-white py-1 lg:py-4 z-50"
                 style={{
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.5)',
                     backgroundColor: '#0f0f0f',
@@ -69,7 +69,7 @@ const App = () => {
                         {pages.map((page) => (
                             <li
                                 key={page.id}
-                                className="py-2 px-4 cursor-pointer hover:text-blue-500"
+                                className="py-2 px-8 cursor-pointer hover:text-blue-500"
                                 onClick={() => handleNavigate(page.id)}
                             >
                                 {page.name}

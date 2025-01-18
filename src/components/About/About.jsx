@@ -29,9 +29,9 @@ const About = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center w-screen h-screen lg:pb-8 lg:pt-[4rem] text-gray-300 bg-[#0f0f0f]">
+        <div className="flex flex-col items-center justify-center w-screen h-screen lg:pb-8 lg:pt-[4rem] text-gray-300 bg-[#141412]">
             {/* Section Title */}
-            <h1 className="text-3xl sm:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-10">
+            <h1 className="text-3xl sm:text-5xl text-gray-200 font-extrabold tracking-widest text-center pb-10">
                 ABOUT ME
             </h1>
 
@@ -47,7 +47,7 @@ const About = () => {
                     <img
                         src={me2}
                         alt="me"
-                        className="object-cover h-[17rem] w-[11.5rem] lg:h-[31.5rem] lg:w-[95rem] rounded-2xl shadow-lg duration-300"
+                        className="object-cover h-[19rem] w-[12.5rem] lg:h-[31.5rem] lg:w-[95rem] rounded-2xl shadow-lg duration-300"
                         style={{
                             boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.5)',
                         }}
@@ -57,25 +57,25 @@ const About = () => {
                 {/* Column 2 - Text */}
                 <div
                     ref={textRef}
-                    className={`pt-2 lg:pt-10 flex flex-col justify-start space-y-4 lg:space-y-6 text-start transition-all duration-700 ${
+                    className={`pt-2 lg:pt-10 flex flex-col justify-center space-y-4 lg:space-y-6 text-start transition-all duration-700 ${
                         isTextVisible ? 'animate-slideInFromRight' : 'opacity-0 translate-x-[100px]'
                     }`}
                 >
-                    <p className="text-xs sm:text-sm lg:text-lg leading-relaxed">
-                        Hello, I’m <span className="text-blue-500 font-bold">William Cole</span>. I’m currently pursuing
-                        a dual degree in <span className="text-blue-500 font-bold">Computer Systems Engineering</span> and
-                        <span className="text-blue-500 font-bold"> Data Science & AI Engineering</span>, with a strong passion
+                    <p className="text-xs lg:text-lg leading-relaxed text-center lg:text-start">
+                        Hello, I’m <span className="text-gray-500 font-bold">William Cole</span>. I’m currently pursuing
+                        a dual degree in <span className="text-gray-500 font-bold">Computer Systems Engineering</span> and
+                        <span className="text-gray-500 font-bold"> Data Science & AI Engineering</span>, with a strong passion
                         for learning and creating innovative software solutions. My goal is to contribute to impactful projects
                         that merge cutting-edge technologies with meaningful user experiences.
                     </p>
 
-                    <p className="hidden lg:block lg:text-lg leading-relaxed">
-                        With a foundation in <span className="text-blue-500 font-bold">frontend</span> and <span className="text-blue-500 font-bold">backend development</span>,
+                    <p className="text-xs lg:text-lg leading-relaxed text-center lg:text-start ">
+                        With a foundation in <span className="text-gray-500 font-bold">frontend</span> and <span className="text-gray-500 font-bold">backend development</span>,
                         I specialize in crafting seamless web applications, designing scalable APIs, and integrating AI-powered tools to enhance usability.
                         I enjoy tackling complex challenges, and I’m always exploring new tools and methodologies to improve my craft.
                     </p>
 
-                    <p className="text-base sm:text-lg font-bold leading-relaxed text-blue-500">
+                    <p className="text-base sm:text-lg font-bold leading-relaxed text-center lg:text-start text-gray-500">
                         williamstevencole@gmail.com
                     </p>
 

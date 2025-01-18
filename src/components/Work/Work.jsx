@@ -67,12 +67,12 @@ const Work = () => {
     };
 
     return (
-        <div className="flex align-center justify-center h-fit lg:w-screen pt-16 bg-[#0f0f0f] ">
+        <div className="flex align-center justify-center h-fit lg:w-screen pt-5 pb-7  bg-[#120a1c] ">
             <div className="flex flex-col items-center justify-center pt-10 lg:pb-20">
                 {/* Project Title */}
                 <h1
                     ref={titleRef}
-                    className={`text-3xl sm:text-5xl text-blue-500 font-extrabold pt-4 pb-10 lg:pb-16 lg:pt-12 sm:pt-[50px] tracking-widest transition-all duration-700 ${
+                    className={`text-3xl sm:text-5xl text-purple-500 font-extrabold pb-10 lg:pb-16 lg:pt-6 tracking-widest transition-all duration-700 ${
                         isTitleVisible ? 'animate-slideInFromTop' : 'opacity-0 translate-y-10'
                     }`}
                 >
@@ -83,7 +83,7 @@ const Work = () => {
                 <div className="relative flex items-center justify-center">
                     <button
                         onClick={handlePrev}
-                        className="absolute left-[-4rem] bg-blue-500 text-white p-4 rounded-full hover:bg-blue-600 transition"
+                        className="absolute left-[-4rem] bg-purple-950 text-white p-4 rounded-full hover:bg-purple-600 transition"
                     >
                         &#8592;
                     </button>
@@ -126,7 +126,7 @@ const Work = () => {
 
                     <button
                         onClick={handleNext}
-                        className="absolute right-[-4rem] bg-blue-500 text-white p-4 rounded-full hover:bg-blue-600 transition"
+                        className="absolute right-[-4rem] bg-purple-950 text-white p-4 rounded-full hover:bg-purple-600 transition"
                     >
                         &#8594;
                     </button>

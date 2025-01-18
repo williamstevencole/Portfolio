@@ -63,7 +63,7 @@ const Skills = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center w-full h-fit bg-[#0f0f0f] text-gray-300 lg:pt-[5rem] px-4">
+        <div className="flex flex-col items-center justify-center w-full h-fit bg-[#011123] text-gray-300 pt-12 lg:pt-[5rem] px-4 pb-12">
             {/* Section Title */}
             <h1
                 ref={textRef}

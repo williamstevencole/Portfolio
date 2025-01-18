@@ -14,9 +14,13 @@ const ContactMe = () => {
     const observeVisibility = (ref, callback) => {
       const observer = new IntersectionObserver(
         ([entry]) => {
-          callback(entry.isIntersecting);
+          if (entry.isIntersecting) {
+            setTimeout(() => callback(true), 100); // Delay for smooth animations
+          } else {
+            callback(false);
+          }
         },
-        { threshold: 0.3 } // Adjust visibility threshold as needed
+        { threshold: 0.001 }
       );
 
       if (ref.current) observer.observe(ref.current);
@@ -36,12 +40,12 @@ const ContactMe = () => {
   }, []);
 
   return (
-    <div className="bg-[#0f0f0f] h-screen w-screen flex flex-col items-center justify-center pt-[7rem] pb-14 lg:pt-8 text-white">
+    <div className="bg-[#0a0a0a] min-h-screen w-full flex flex-col items-center justify-start pt-12 pb-14 lg:pt-[7rem] text-white">
       {/* Section Title */}
       <div className="w-full flex justify-center items-center">
         <h1
           ref={titleRef}
-          className={`text-3xl sm:text-5xl font-extrabold tracking-widest text-blue-500 text-center transition-all duration-700 ${
+          className={`text-3xl sm:text-5xl font-extrabold tracking-widest text-blue-500 text-center lg:pb-1 transition-all duration-700 ${
             isTitleVisible ? "animate-slideInFromTop" : "opacity-0 translate-y-10"
           }`}
         >
@@ -50,7 +54,7 @@ const ContactMe = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-20 py-[4rem]">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-20 py-[4rem] w-full">
         {/* Image Section (No Animation) */}
         <div className="flex justify-center">
           <div

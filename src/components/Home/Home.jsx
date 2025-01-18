@@ -42,9 +42,9 @@ const Home = () => {
     }, [titles, currentTitleIndex, isDeleting, charIndex]);
 
     return (
-        <div className="pt-[4.5rem] lg:pt-[2.5rem] grid grid-cols-1 lg:grid-cols-2  lg:gap-4 lg:pb-8 lg:px-16">
+        <div className="min-h-screen bg-[#0f0f0f] pt-[4.5rem] px-2 pb-10 lg:pt-[2.5rem] grid grid-cols-1 lg:grid-cols-2  lg:gap-4 lg:pb-8 lg:px-16">
             {/* Image Section */}
-            <div className="order-1 lg:order-2 flex justify-center items-center animate-slideInFromRight">
+            <div className="order-1 lg:order-2 flex justify-center items-center animate-slideInFromRight pt-4">
                 <div
                     className="w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden flex items-center justify-center"
                     style={{
@@ -92,7 +92,7 @@ const Home = () => {
             </div>
 
             {/* Text Section */}
-            <div className="order-2 lg:order-1 font px-4 lg:py-[8rem] lg:space-y-2 relative animate-slideInFromLeft text-center lg:text-left">
+            <div className="order-2 lg:order-1 font pt-8 px-4 lg:py-[13rem] lg:space-y-2 relative animate-slideInFromLeft text-center lg:text-left">
                 <h1 className="font-extrabold text-4xl lg:text-6xl text-blue-500">
                     Hi, I&apos;m William
                 </h1>
@@ -101,7 +101,7 @@ const Home = () => {
                         I&apos;m a&nbsp;
                     </h3>
                     <span
-                        className="font-bold text-xl lg:text-3xl text-blue-500 border-r-2 border-orange-500 whitespace-nowrap"
+                        className="font-bold text-xl lg:text-3xl text-blue-500 border-r-2 border-orange-500 break-words lg:whitespace-nowrap"
                     >
                         {currentTitle}
                     </span>
