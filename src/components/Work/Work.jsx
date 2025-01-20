@@ -67,12 +67,12 @@ const Work = () => {
     };
 
     return (
-        <div className="flex align-center justify-center h-screen lg:h-screen lg:w-screen pt-5 pb-7  bg-[#b21e35] ">
-            <div className="flex flex-col items-center justify-center pt-10 lg:pb-20">
+        <div className="flex align-center justify-center h-screen w-screen pb-7 bg-[#32241d] ">
+            <div className="flex flex-col items-center justify-center lg:pb-20">
                 {/* Project Title */}
                 <h1
                     ref={titleRef}
-                    className={`text-3xl sm:text-5xl text-[#641220] font-extrabold pb-10 lg:pb-16 lg:pt-6 tracking-widest transition-all duration-700 ${
+                    className={`text-3xl sm:text-5xl text-[#ede1db] font-extrabold pb-10 lg:pb-16 lg:pt-6 tracking-widest transition-all duration-700 ${
                         isTitleVisible ? 'animate-slideInFromTop' : 'opacity-0 translate-y-10'
                     }`}
                 >
@@ -100,7 +100,7 @@ const Work = () => {
                                         : 'rotate-y-10 scale-90'
                                 }`}
                                 style={{
-                                    backgroundColor: '#a11d30',
+                                    backgroundColor: '#86624f',
                                     boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
                                     transform:
                                         position === 1
@@ -113,12 +113,12 @@ const Work = () => {
                                 <img
                                     src={images[index]}
                                     alt={workTitle[index]}
-                                    className="w-full h-[13rem] object-cover"
+                                    className="text-[#ede1db] w-full h-[13rem] object-cover"
                                 />
 
                                 <div className="absolute top-[11.2rem] left-0 right-0 px-4 text-white text-center">
-                                    <h1 className="text-2xl font-bold">{workTitle[index]}</h1>
-                                    <p className="text-[0.75rem] lg:text-[0.75rem] pt-2">{descriptions[index]}</p>
+                                    <h1 className="text-2xl text-@#ede1db] font-bold">{workTitle[index]}</h1>
+                                    <p className="text-[0.75rem] text-[#faf7f6] lg:text-[0.75rem] pt-2">{descriptions[index]}</p>
                                 </div>
                             </div>
                         ))}
