@@ -48,7 +48,7 @@ const Work = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             handleNext();
-        }, 2500);
+        }, 4500);
         return () => clearInterval(interval);
     }, [visibleProjects]);
 
@@ -67,12 +67,12 @@ const Work = () => {
     };
 
     return (
-        <div className="flex align-center justify-center h-fit lg:w-screen pt-5 pb-7  bg-[#120a1c] ">
+        <div className="flex align-center justify-center h-screen lg:h-screen lg:w-screen pt-5 pb-7  bg-[#b21e35] ">
             <div className="flex flex-col items-center justify-center pt-10 lg:pb-20">
                 {/* Project Title */}
                 <h1
                     ref={titleRef}
-                    className={`text-3xl sm:text-5xl text-purple-500 font-extrabold pb-10 lg:pb-16 lg:pt-6 tracking-widest transition-all duration-700 ${
+                    className={`text-3xl sm:text-5xl text-[#641220] font-extrabold pb-10 lg:pb-16 lg:pt-6 tracking-widest transition-all duration-700 ${
                         isTitleVisible ? 'animate-slideInFromTop' : 'opacity-0 translate-y-10'
                     }`}
                 >
@@ -83,7 +83,7 @@ const Work = () => {
                 <div className="relative flex items-center justify-center">
                     <button
                         onClick={handlePrev}
-                        className="absolute left-[-4rem] bg-purple-950 text-white p-4 rounded-full hover:bg-purple-600 transition"
+                        className="absolute left-[-4rem] bg-blue-950 text-white p-4 rounded-full hover:bg-blue-800 transition"
                     >
                         &#8592;
                     </button>
@@ -100,7 +100,7 @@ const Work = () => {
                                         : 'rotate-y-10 scale-90'
                                 }`}
                                 style={{
-                                    backgroundColor: '#1c1a1a',
+                                    backgroundColor: '#a11d30',
                                     boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
                                     transform:
                                         position === 1
@@ -126,7 +126,7 @@ const Work = () => {
 
                     <button
                         onClick={handleNext}
-                        className="absolute right-[-4rem] bg-purple-950 text-white p-4 rounded-full hover:bg-purple-600 transition"
+                        className="absolute right-[-4rem] bg-blue-950 text-white p-4 rounded-full hover:bg-blue-800 transition"
                     >
                         &#8594;
                     </button>

@@ -47,7 +47,7 @@ const Skills = () => {
             },
             {
                 root: null, // Defaults to the viewport
-                threshold: 0.2, // Trigger visibility at 20% in the viewport
+                threshold: 0.4, // Trigger visibility at 20% in the viewport
             }
         );
 
@@ -63,12 +63,12 @@ const Skills = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center w-full h-fit bg-[#011123] text-gray-300 pt-12 lg:pt-[5rem] px-4 pb-12">
+        <div className="flex flex-col items-center justify-center w-full h-fit bg-[#081714] text-gray-300 pt-12 lg:pt-[2.4rem] lg:pb-20 px-4 pb-12">
             {/* Section Title */}
             <h1
                 ref={textRef}
                 data-type="text"
-                className={`text-3xl xs:text-3xl sm:text-4xl lg:text-5xl text-blue-500 font-extrabold tracking-widest text-center pb-2 lg:pb-3 lg:pt-6 transition-all duration-500 ${
+                className={`text-3xl xs:text-3xl sm:text-4xl lg:text-5xl text-blue-800 font-extrabold tracking-widest text-center pb-2 lg:pb-3 lg:pt-6 transition-all duration-500 ${
                     isTextVisible ? 'animate-slideInFromTop opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
             >
@@ -92,7 +92,7 @@ const Skills = () => {
                     <div
                         key={skill.name}
                         data-index={index}
-                        className={`flex flex-col items-center justify-center bg-[#1c1a1a] p-2 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl ${
+                        className={`flex flex-col items-center justify-center bg-[#011933] p-2 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl ${
                             visibleCards.has(index)
                                 ? 'animate-slideInFromBottom opacity-100 translate-y-0'
                                 : 'opacity-0 translate-y-10'

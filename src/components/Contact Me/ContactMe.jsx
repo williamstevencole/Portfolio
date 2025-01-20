@@ -40,12 +40,12 @@ const ContactMe = () => {
   }, []);
 
   return (
-    <div className="bg-[#0a0a0a] min-h-screen w-full flex flex-col items-center justify-start pt-12 pb-14 lg:pt-[7rem] text-white">
+    <div className="bg-[#240046] min-h-screen w-full flex flex-col items-center justify-start pt-12 pb-14 lg:pt-[7rem] text-white">
       {/* Section Title */}
       <div className="w-full flex justify-center items-center">
         <h1
           ref={titleRef}
-          className={`text-3xl sm:text-5xl font-extrabold tracking-widest text-blue-500 text-center lg:pb-1 transition-all duration-700 ${
+          className={`text-3xl sm:text-5xl font-extrabold tracking-widest text-[#7b2cbf] text-center lg:pb-1 transition-all duration-700 ${
             isTitleVisible ? "animate-slideInFromTop" : "opacity-0 translate-y-10"
           }`}
         >
@@ -68,29 +68,29 @@ const ContactMe = () => {
               {`
                 @keyframes rgbSpin {
                   0% {
-                    box-shadow: 0 0 20px 10px rgba(0, 0, 255, 1),
-                                0 0 60px 30px rgba(0, 0, 255, 0.8),
-                                20px 0 40px rgba(0, 0, 255, 0.5);
+                    box-shadow: 0 0 20px 10px rgba(157, 78, 221,1),
+                                0 0 60px 30px rgba(157, 78, 221,0.8),
+                                20px 0 40px rgba(157, 78, 221,0.5);
                   }
                   25% {
-                    box-shadow: -20px 0 20px rgba(0, 0, 255, 1),
-                                0 0 60px 30px rgba(0, 0, 255, 0.8),
-                                0 20px 40px rgba(0, 0, 255, 0.5);
+                    box-shadow: -20px 0 20px rgba(157, 78, 221,1),
+                                0 0 60px 30px rgba(157, 78, 221,0.8),
+                                0 20px 40px rgba(157, 78, 221,0.5);
                   }
                   50% {
-                    box-shadow: 0 0 20px 10px rgba(0, 0, 255, 1),
-                                0 -20px 60px rgba(0, 0, 255, 0.8),
-                                -20px 0 40px rgba(0, 0, 255, 0.5);
+                    box-shadow: 0 0 20px 10px rgba(157, 78, 221,1),
+                                0 -20px 60px rgba(157, 78, 221,0.8),
+                                -20px 0 40px rgba(157, 78, 221,0.5);
                   }
                   75% {
-                    box-shadow: 20px 0 20px rgba(0, 0, 255, 1),
-                                0 0 60px 30px rgba(0, 0, 255, 0.8),
-                                0 -20px 40px rgba(0, 0, 255, 0.5);
+                    box-shadow: 20px 0 20px rgba(157, 78, 221,1),
+                                0 0 60px 30px rgba(157, 78, 221,0.8),
+                                0 -20px 40px rgba(157, 78, 221,0.5);
                   }
                   100% {
-                    box-shadow: 0 0 20px 10px rgba(0, 0, 255, 1),
-                                0 0 60px 30px rgba(0, 0, 255, 0.8),
-                                20px 0 40px rgba(0, 0, 255, 0.5);
+                    box-shadow: 0 0 20px 10px rgba(157, 78, 221,1),
+                                0 0 60px 30px rgba(157, 78, 221,0.8),
+                                20px 0 40px rgba(157, 78, 221,0.5);
                   }
                 }
               `}
@@ -114,7 +114,7 @@ const ContactMe = () => {
         >
           {/* Contact Me */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-blue-500 pb-2">
+            <h3 className="text-2xl  font-bold text-[#7b2cbf] pb-2">
               CONTACT ME
             </h3>
             <p className="text-gray-300 text-sm sm:text-lg">
@@ -134,27 +134,37 @@ const ContactMe = () => {
                 : "opacity-0 translate-x-[-100px]"
             }`}
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-blue-500 pb-4">
-              LET&#39;S CONNECT
-            </h3>
-            <div className="space-x-2 sm:space-x-4 flex items-center">
-              <button className="bg-blue-500 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
-                <img
-                  src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000"
-                  alt="LinkedIn"
-                  className="w-6 h-6"
-                />
-                <span>LinkedIn</span>
-              </button>
-              <button className="bg-blue-500 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center space-x-2">
-                <img
-                  src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
-                  alt="GitHub"
-                  className="w-6 h-6"
-                />
-                <span>GitHub</span>
-              </button>
-            </div>
+            <h3 className="text-2xl font-bold text-[#7b2cbf] pb-4">
+                LET&#39;S CONNECT
+                </h3>
+                <div className="space-x-2 sm:space-x-4 flex items-center">
+                <a
+                    //href="https://www.linkedin.com/in/your-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-purple-500 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-purple-600 transition duration-300 flex items-center space-x-2"
+                    >
+                        <img
+                        src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000"
+                        alt="LinkedIn"
+                        className="w-6 h-6"
+                        />
+                        <span>LinkedIn</span>
+                    </a>
+                <a
+                    href="https://github.com/coleexz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-purple-500 text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-purple-600 transition duration-300 flex items-center space-x-2"
+                >
+                    <img
+                    src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
+                    alt="GitHub"
+                    className="w-6 h-6"
+                    />
+                    <span>GitHub</span>
+                </a>
+                </div>
           </div>
 
           {/* Footer */}

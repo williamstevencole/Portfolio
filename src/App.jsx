@@ -38,7 +38,7 @@ const App = () => {
                 }}
             >
                 <nav className="flex justify-between items-center px-8">
-                    <div className="text-xl font-bold text-blue-500">coleexz</div>
+                    <div className="text-xl font-bold text-gray-300">coleexz</div>
                     {/* Hamburger Menu for Mobile */}
                     <div className="lg:hidden">
                         <button
