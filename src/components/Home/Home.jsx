@@ -45,15 +45,15 @@ const Home = () => {
         <div className="h-screen w-screen lg:pt-[1.5rem] bg-[#b9927e] grid grid-cols-1 lg:grid-cols-2 ">
             {/* Text Section */}
             <div className="order-2 lg:order-1 pt-14 px-4 lg:ps-10 lg:py-[12rem] lg:space-y-2 relative animate-slideInFromLeft text-center lg:text-left">
-                <h1 className="font-extrabold text-4xl lg:text-6xl text-[#e0ccc1]">
+                <h1 className="font-extrabold text-4xl lg:text-6xl text-[#705344]">
                     Hi, I&apos;m William
                 </h1>
                 <div className="pt-4 flex flex-col lg:flex-row items-center lg:items-baseline">
                     <h3 className="text-white font-bold text-xl lg:text-3xl ">
                         I&apos;m a&nbsp;
                     </h3>
-                    <span
-                        className="font-bold text-xl lg:text-3xl text-[#e0ccc1] pr-4 border-orange-500 break-words lg:whitespace-nowrap"
+                        <span
+                        className="font-bold text-xl lg:text-3xl text-[#705344] pr-4 border-orange-500 break-words lg:whitespace-nowrap"
                     >
                         {currentTitle}
                     </span>

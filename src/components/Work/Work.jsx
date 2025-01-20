@@ -83,7 +83,7 @@ const Work = () => {
                 <div className="relative flex items-center justify-center">
                     <button
                         onClick={handlePrev}
-                        className="absolute left-[-4rem] bg-blue-950 text-white p-4 rounded-full hover:bg-blue-800 transition"
+                        className="absolute left-[-4rem] bg-[#86624f] text-white p-4 rounded-full hover:bg-[#86620C] transition"
                     >
                         &#8592;
                     </button>
@@ -126,7 +126,7 @@ const Work = () => {
 
                     <button
                         onClick={handleNext}
-                        className="absolute right-[-4rem] bg-blue-950 text-white p-4 rounded-full hover:bg-blue-800 transition"
+                        className="absolute right-[-4rem] bg-[#86624f] text-white p-4 rounded-full hover:bg-[#86620C] transition"
                     >
                         &#8594;
                     </button>
