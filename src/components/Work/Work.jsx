@@ -67,12 +67,12 @@ const Work = () => {
     };
 
     return (
-        <div className="flex align-center justify-center h-screen w-screen pb-7 bg-[#32241d] ">
+        <div className="flex align-center justify-center h-screen w-screen pb-7 bg-black ">
             <div className="flex flex-col items-center justify-center lg:pb-20">
                 {/* Project Title */}
                 <h1
                     ref={titleRef}
-                    className={`text-3xl sm:text-5xl text-[#ede1db] font-extrabold pb-10 lg:pb-16 lg:pt-6 tracking-widest transition-all duration-700 ${
+                    className={`text-3xl sm:text-5xl text-[#d3d3d3] font-extrabold pb-10 lg:pb-16 lg:pt-6 tracking-widest transition-all duration-700 ${
                         isTitleVisible ? 'animate-slideInFromTop' : 'opacity-0 translate-y-10'
                     }`}
                 >
@@ -83,7 +83,7 @@ const Work = () => {
                 <div className="relative flex items-center justify-center">
                     <button
                         onClick={handlePrev}
-                        className="absolute left-[-4rem] bg-[#86624f] text-white p-4 rounded-full hover:bg-[#86620C] transition"
+                        className="absolute left-[-4rem] bg-[#393d3f] text-white p-4 rounded-full hover:bg-gray-700 transition"
                     >
                         &#8592;
                     </button>
@@ -100,7 +100,7 @@ const Work = () => {
                                         : 'rotate-y-10 scale-90'
                                 }`}
                                 style={{
-                                    backgroundColor: '#86624f',
+                                    backgroundColor: '#FFFFFF',
                                     boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
                                     transform:
                                         position === 1
@@ -117,8 +117,8 @@ const Work = () => {
                                 />
 
                                 <div className="absolute top-[11.2rem] left-0 right-0 px-4 text-white text-center">
-                                    <h1 className="text-2xl text-@#ede1db] font-bold">{workTitle[index]}</h1>
-                                    <p className="text-[0.75rem] text-[#faf7f6] lg:text-[0.75rem] pt-2">{descriptions[index]}</p>
+                                    <h1 className="text-2xl text-[#000000] font-bold">{workTitle[index]}</h1>
+                                    <p className="text-[0.75rem] text-[#000000] lg:text-[0.75rem] pt-2">{descriptions[index]}</p>
                                 </div>
                             </div>
                         ))}
@@ -126,7 +126,7 @@ const Work = () => {
 
                     <button
                         onClick={handleNext}
-                        className="absolute right-[-4rem] bg-[#86624f] text-white p-4 rounded-full hover:bg-[#86620C] transition"
+                        className="absolute right-[-4rem] bg-[#393d3f] text-white p-4 rounded-full hover:bg-gray-700 transition"
                     >
                         &#8594;
                     </button>

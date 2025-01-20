@@ -40,11 +40,11 @@ const ContactMe = () => {
   }, []);
 
   return (
-    <div className="bg-[#705344] h-screen w-full flex flex-col items-center justify-start">
-      <div className="w-full bg-[#ccad9d] py-10 px-6 flex justify-center items-center">
+    <div className="h-screen w-full flex flex-col items-center justify-start">
+      <div className="w-full bg-white py-10 px-6 flex justify-center items-center">
         <h1
             ref={titleRef}
-            className={`text-3xl sm:text-5xl font-extrabold tracking-widest text-[#ede1db] text-center lg:pb-1 transition-all duration-700 ${
+            className={`text-3xl sm:text-5xl font-extrabold tracking-widest text-black text-center lg:pb-1 transition-all duration-700 ${
             isTitleVisible ? "animate-slideInFromTop" : "opacity-0 translate-y-10"
             }`}
         >
@@ -54,7 +54,7 @@ const ContactMe = () => {
 
         <div className="flex flex-col md:flex-row w-full h-screen">
             {/* Right Column (Image Section) */}
-            <div className="w-full md:w-1/2 bg-[#5f493d] flex justify-center items-center p-12">
+            <div className="w-full md:w-1/2 bg-[#a4161a] flex justify-center items-center p-12">
     <div
                         className="w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden flex items-center justify-center"
                         style={{
@@ -66,29 +66,29 @@ const ContactMe = () => {
                             {`
                                 @keyframes rgbSpin {
                                     0% {
-                                        box-shadow: 0 0 20px 10px rgba(245, 238, 235, 1),
-                                                    0 0 60px 30px rgba(245, 238, 235, 0.8),
-                                                    20px 0 40px rgba(245, 238, 235, 0.5);
+                                        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1),
+                                                    0 0 60px 30px rgba(0, 0, 0, 0.8),
+                                                    20px 0 40px rgba(0, 0, 0, 0.5);
                                     }
                                     25% {
-                                        box-shadow: -20px 0 20px rgba(245, 238, 235, 1),
-                                                    0 0 60px 30px rgba(245, 238, 235, 0.8),
-                                                    0 20px 40px rgba(245, 238, 235, 0.5);
+                                        box-shadow: -20px 0 20px rgba(0, 0, 0, 1),
+                                                    0 0 60px 30px rgba(0, 0, 0, 0.8),
+                                                    0 20px 40px rgba(0, 0, 0, 0.5);
                                     }
                                     50% {
-                                        box-shadow: 0 0 20px 10px rgba(245, 238, 235, 1),
-                                                    0 -20px 60px rgba(245, 238, 235, 0.8),
-                                                    -20px 0 40px rgba(245, 238, 235, 0.5);
+                                        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1),
+                                                    0 -20px 60px rgba(0, 0, 0, 0.8),
+                                                    -20px 0 40px rgba(0, 0, 0, 0.5);
                                     }
                                     75% {
-                                        box-shadow: 20px 0 20px rgba(245, 238, 235, 1),
-                                                    0 0 60px 30px rgba(245, 238, 235, 0.8),
-                                                    0 -20px 40px rgba(245, 238, 235, 0.5);
+                                        box-shadow: 20px 0 20px rgba(0, 0, 0, 1),
+                                                    0 0 60px 30px rgba(0, 0, 0, 0.8),
+                                                    0 -20px 40px rgba(0, 0, 0, 0.5);
                                     }
                                     100% {
-                                        box-shadow: 0 0 20px 10px rgba(245, 238, 235, 1),
-                                                    0 0 60px 30px rgba(245, 238, 235, 0.8),
-                                                    20px 0 40px rgba(245, 238, 235, 0.5);
+                                        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1),
+                                                    0 0 60px 30px rgba(0, 0, 0, 0.8),
+                                                    20px 0 40px rgba(0, 0, 0, 0.5);
                                     }
                                 }
                             `}
@@ -104,7 +104,7 @@ const ContactMe = () => {
             </div>
 
             {/* Left Column (Text Section) */}
-                <div className="w-full md:w-1/2 bg-[#86624f] flex flex-col items-center justify-center p-12 text-white">
+                <div className="w-full md:w-1/2 bg-[#e5383b] flex flex-col items-center justify-center p-12 text-white">
                     <div
                     ref={textRef}
                     className={`flex flex-col items-center md:items-start text-center md:text-left max-w-full md:max-w-lg space-y-6 sm:space-y-8 transition-all duration-700 ${
@@ -115,9 +115,9 @@ const ContactMe = () => {
                     >
                     {/* Contact Me */}
                     <div>
-                        <h3 className="text-2xl font-bold text-[#ede1db] pb-4">CONTACT ME</h3>
-                        <p className="text-[#f5eeeb] text-sm sm:text-lg">
-                        E-mail: <span className="text-white font-semibold">williamstevencole@gmail.com</span>
+                        <h3 className="text-2xl font-bold text-black pb-4">CONTACT ME</h3>
+                        <p className="text-[#161a1d] text-sm sm:text-lg">
+                        E-mail: <span className="text-black font-semibold">williamstevencole@gmail.com</span>
                         </p>
                     </div>
 
@@ -130,12 +130,12 @@ const ContactMe = () => {
                             : "opacity-0 translate-x-[-100px]"
                         }`}
                     >
-                        <h3 className="text-2xl font-bold text-[#ede1db] pb-4">LET&#39;S CONNECT</h3>
+                        <h3 className="text-2xl font-bold text-black pb-4">LET&#39;S CONNECT</h3>
                         <div className="space-x-2 sm:space-x-4 flex items-center">
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#705344] text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-[#5f493d] transition duration-300 flex items-center space-x-2"
+                            className="bg-[#a4161a] text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-red-700 transition duration-300 flex items-center space-x-2"
                         >
                             <img
                             src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000"
@@ -148,7 +148,7 @@ const ContactMe = () => {
                             href="https://github.com/coleexz"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#705344] text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-[#5f493d] transition duration-300 flex items-center space-x-2"
+                            className="bg-[#a4161a] text-white font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-red-700 transition duration-300 flex items-center space-x-2"
                         >
                             <img
                             src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
@@ -163,10 +163,10 @@ const ContactMe = () => {
                     {/* Footer */}
                     <div className="pt-1">
                         <p className="text-gray-300 text-sm font-extralight">
-                        <span className="text-white font-semibold">@2025 William Cole</span>{" "}
+                        <span className="text-black font-semibold">@2025 William Cole</span>{" "}
                         <br />
-                        Made with <span className="text-yellow-400">❤️</span> and{" "}
-                        <span className="text-green-400">☕</span>
+                        Made with <span className="text-white">❤️</span> and{" "}
+                        <span className="text-white">☕</span>
                         </p>
                     </div>
                     </div>
