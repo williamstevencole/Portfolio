@@ -70,8 +70,12 @@ module.exports = {
         customBounce: {
             '0%, 100%': { transform: 'translateY(0)' },
             '50%': { transform: 'translateY(-5px)' },
-        }
-
+        },
+        gradientLoop: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
       animation: {
         typing: 'typing 3s steps(40, end)',
@@ -86,6 +90,10 @@ module.exports = {
         slideOutToBottom: 'slideOutToBottom 1.5s ease-in',
         slideInFromBottom: 'slideInFromBottom 0.7s ease-out',
         customBounce: 'customBounce 1s ease infinite',
+        gradient: "gradientLoop 10s infinite linear",
+      },
+      backgroundSize: {
+        "400%": "400% 100%", // Ensures smooth movement
       },
     },
   },

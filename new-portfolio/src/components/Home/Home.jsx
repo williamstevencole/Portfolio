@@ -44,7 +44,7 @@ const Home = () => {
     return (
         <div className="h-screen w-screen lg:pt-[1.5rem]  grid grid-cols-1 lg:grid-cols-2 ">
             {/* Text Section */}
-            <div className="order-2 lg:order-1 bg-[#FFFFFF] pt-14 px-4 lg:ps-10 lg:py-[12rem] lg:space-y-2 relative animate-slideInFromLeft text-center lg:text-left">
+            <div className="order-2 lg:order-1  pt-14 px-4 lg:ps-10 lg:py-[12rem] lg:space-y-2 relative animate-slideInFromLeft text-center lg:text-left">
                 <h1 className="font-extrabold text-4xl lg:text-6xl text-[#000000]">
                     Hi, I&apos;m William
                 </h1>

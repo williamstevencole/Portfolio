@@ -19,7 +19,7 @@ const About = () => {
                     }
                 });
             },
-            { threshold: 0.0001 } // Trigger when 10% of the element is visible
+            { threshold: 0.0001 }
         );
 
         if (imageRef.current) observer.observe(imageRef.current);
@@ -29,15 +29,12 @@ const About = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center w-screen h-screen lg:pb-8 lg:pt-[4rem] text-gray-300 bg-[#a4161a]">
-            {/* Section Title */}
+        <div className="flex flex-col items-center justify-center w-screen h-screen lg:pb-8 lg:pt-[4rem] text-gray-300 bg-gradient-to-r from-[#FFCFDF] via-[#F3D1DC] via-[#C6D8FF] via-[#D4E157] via-[#B2EBF2] via-[#FFD3B6] via-[#C5E1A5] via-[#A7C5EB] via-[#E6E6FA] via-[#FAD6A5] via-[#FFB6C1] to-[#B5EAD7] bg-400% animate-gradient">
             <h1 className="text-3xl sm:text-5xl text-white font-extrabold tracking-widest text-center pb-10">
                 ABOUT ME
             </h1>
 
-            {/* Main Content */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-4 lg:gap-8 px-4 lg:px-20 lg:pt-2 max-w-screen-xl">
-                {/* Column 1 - Image */}
                 <div
                     ref={imageRef}
                     className={`flex justify-center items-center transition-all duration-700 ${
@@ -54,7 +51,6 @@ const About = () => {
                     />
                 </div>
 
-                {/* Column 2 - Text */}
                 <div
                     ref={textRef}
                     className={`pt-2 lg:pt-10 flex flex-col justify-center space-y-4 lg:space-y-6 text-start transition-all duration-700 ${
@@ -81,7 +77,6 @@ const About = () => {
                         williamstevencole@gmail.com
                     </p>
 
-                    {/* Social Icons */}
                     <div className="flex space-x-6 mt-5 justify-center sm:justify-start">
                         <a
                             href="https://github.com/coleexz"
@@ -119,7 +114,7 @@ const About = () => {
                         </a>
                     </div>
                 </div>
-        </div>
+            </div>
         </div>
     );
 };
