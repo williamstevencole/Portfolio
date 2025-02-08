@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling on the body */
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+}
+
+
+.slideInFromBottom {
+    transform: translateY(100%);
+    animation: slideInFromBottom 0.3s forwards;
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slideOutToTop {
+    animation: slideOutToTop 0.3s forwards;
+}
+
+@keyframes slideOutToTop {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.slideInFromTop {
+    transform: translateY(-100%);
+    animation: slideInFromTop 0.3s forwards;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slideOutToBottom {
+    animation: slideOutToBottom 0.3s forwards;
+}
+
+@keyframes slideOutToBottom {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
