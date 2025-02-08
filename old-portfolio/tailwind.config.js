@@ -18,7 +18,7 @@ module.exports = {
         },
         blinkCaret: {
           'from, to': { borderColor: 'transparent' },
-          '50%': { borderColor: 'orange' },
+          '50%': { borderColor: 'red' },
         },
         slideInFromLeft: {
           '0%': { transform: 'translateX(-100%)', opacity: '0' },
