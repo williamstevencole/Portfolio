@@ -29,7 +29,7 @@ const About = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center w-screen h-screen lg:pb-8 lg:pt-[4rem] text-gray-300 bg-gradient-to-r from-[#FFCFDF] via-[#F3D1DC] via-[#C6D8FF] via-[#D4E157] via-[#B2EBF2] via-[#FFD3B6] via-[#C5E1A5] via-[#A7C5EB] via-[#E6E6FA] via-[#FAD6A5] via-[#FFB6C1] to-[#B5EAD7] bg-400% animate-gradient">
+        <div className="flex flex-col items-center justify-center w-screen h-screen lg:pb-8 lg:pt-[4rem] text-gray-300 bg-[#8E3750]">
             <h1 className="text-3xl sm:text-5xl text-white font-extrabold tracking-widest text-center pb-10">
                 ABOUT ME
             </h1>

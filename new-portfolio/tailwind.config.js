@@ -90,7 +90,7 @@ module.exports = {
         slideOutToBottom: 'slideOutToBottom 1.5s ease-in',
         slideInFromBottom: 'slideInFromBottom 0.7s ease-out',
         customBounce: 'customBounce 1s ease infinite',
-        gradient: "gradientLoop 10s infinite linear",
+        gradient: "gradientLoop 15s infinite linear",
       },
       backgroundSize: {
         "400%": "400% 100%", // Ensures smooth movement
